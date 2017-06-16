@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor"
+    tools:context="com.mr.me.mangareader.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:minHeight="?attr/actionBarSize">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/upper_app_name"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:textColor="@android:color/white"
+            android:id="@+id/toolbar_title" />
+    </android.support.v7.widget.Toolbar>
+
+    <GridView
+        android:id="@+id/options"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@color/backgroundColor"
+        android:horizontalSpacing="5dp"
+        android:numColumns="3"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:stretchMode="columnWidth" />
+
+    <TextView
+        android:id="@+id/lastRead"
+        android:background="@color/seperatorColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="@string/last_read"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:padding="8dp" />
+
+    <include layout="@layout/manga_item"
+        android:id="@+id/last_manga_item"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+</LinearLayout>
